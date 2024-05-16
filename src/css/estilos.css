@@ -1,0 +1,314 @@
+/*Importando a fonte do google fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;700&family=Karla:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Lobster&family=Manrope:wght@800&family=Montserrat:wght@500;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@400;700&family=Poppins:wght@100;300;500;800&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display&display=swap');
+
+body {
+    font-family: 'Public Sans', sans-serif;
+}
+
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* -----------------------------*/
+
+
+/*CABEÇALHO*/
+
+.logo .imagem {
+    width: 100px;
+}
+
+.cabecalho {
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    padding: 25px 0;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.cabecalho .logo {
+
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.logo .titulo {
+    margin-left: 7px;
+    font-size: 17px;
+    transition: 0.3s ease-in-out;
+    font-weight: 800;
+}
+
+.logo .titulo:hover {
+    color: #1ED760;
+}
+
+.cabecalho .navegacao .menu {
+    display: flex;
+
+}
+
+.cabecalho .navegacao .menu .item {
+    margin: 10px;
+}
+
+.cabecalho .navegacao .menu .item a {
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+
+}
+
+.cabecalho .navegacao .menu .item a:hover {
+    background-color: #1ED760;
+    color: #fff;
+}
+
+@media(max-width: 624px) {
+    .cabecalho {
+        justify-content: center;
+    }
+
+    .cabecalho .logo {
+        margin-bottom: 30px;
+    }
+
+    .cabecalho .menu .imagem a {
+        font-size: calc(0.6em + 1vw);
+    }
+}
+
+/* ----------------------------- */
+
+/* -----------PAINEL------------------ */
+
+.conteudo-principal .paineis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+}
+
+.conteudo-principal .paineis .imagem-painel {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(70%);
+
+
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+
+}
+
+.conteudo-principal .paineis .projeto1 {
+    background-image: url('../imagens/painel1.jpg');
+}
+
+.conteudo-principal .paineis .projeto2 {
+    background-image: url('../imagens/painel2.jpg');
+}
+
+.conteudo-principal .paineis .projeto3 {
+    background-image: url('../imagens/painel3.jpg');
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar{
+    opacity: 1;
+}
+
+.conteudo-principal .paineis .titulo {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw);
+
+}
+
+.conteudo-principal .paineis .seta {
+    background-image: url('../imagens/seta.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+.conteudo-principal .paineis .seta.btn-voltar {
+    left: 20px;
+    transform: rotateY(180deg);
+}
+
+.conteudo-principal .paineis .seta.btn-avancar {
+    right: 20px;
+}
+
+@media(max-width: 900px) {
+    .conteudo-principal .paineis {
+        height: 500px;
+    }
+}
+
+/* ----------------------------------- */
+
+/* ------------QUEM SOMOS----------------------- */
+
+.quem-somos {
+    background-color: #2941AB;
+}
+
+.quem-somos .conteudo {
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.quem-somos .conteudo .informacoes {
+    width: 40%;
+}
+
+.quem-somos .conteudo .imagem {
+    width: 60%;
+}
+
+.quem-somos .conteudo .informacoes .titulo {
+    font-size: 50px;
+    color: #1ED760;
+    margin-bottom: 20px;
+
+}
+
+
+.quem-somos .conteudo .informacoes .texto {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 400;
+}
+
+@media(max-width:1200px) {
+    .quem-somos .conteudo {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 30px;
+    }
+
+    .imagem {
+        display: none;
+    }
+
+    .quem-somos .conteudo .informacoes {
+        width: 100%;
+    }
+
+}
+
+/* -------------------------------------------- */
+
+
+/* -----------------RODAPE----------------- */
+
+.rodape {
+    padding: 80px 0 20px 0;
+}
+
+.rodape .navegacao {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rodape .navegacao .logo .imagem {
+    width: 100px;
+
+
+}
+
+.rodape .navegacao .logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.rodape .redes-sociais {
+    display: flex;
+}
+
+.rodape .redes-sociais a {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    font-size: 30px;
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 15px;
+    width: 65px;
+    transition: 0.3s ease-in-out;
+}
+
+.rodape .redes-sociais a:hover {
+    background-color: #1ED760;
+}
+
+.rodape .copyright {
+    margin-top: 70px;
+    text-align: center;
+
+}
+
+@media(max-width:940px) {
+    .rodape .navegacao {
+        justify-content: center;
+    }
+
+    .rodape .navegacao .logo {
+        margin-bottom: 30px;
+    }
+
+    .rodape .navegacao .logo,
+    .rodape .navegacao .redes-sociais {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+}
+
+
+
+
+
+/* -------------------------------------------- */
